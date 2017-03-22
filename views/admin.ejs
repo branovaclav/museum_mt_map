@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Andrej Kmet Museum - Map Admin</title>
+
+	<link rel="stylesheet" href="/styles/admin.css">
+
+	<script src="/scripts/jquery-3.2.0.min.js"></script>
+	<script src="/scripts/admin.js"></script>
+</head>
+<body>
+	<ul class="pois">
+		<li class="poi selected" data-id="">
+			<div class="empty">New Point</div>
+			<div class="actions">
+				<!-- <a class="create">Create</a> -->
+			</div>
+			<form id="form">
+				<input type="hidden" name="id">
+				<input type="text" placeholder="position left" name="position_left">
+				<input type="text" placeholder="position top" name="position_top">
+				<input type="text" placeholder="title sk" name="title_sk">
+				<input type="text" placeholder="title en" name="title_en">
+				<textarea placeholder="description sk" name="description_sk"></textarea>
+				<textarea placeholder="description en" name="description_en"></textarea>
+
+				<% let tags = ['monument', 'castle', 'cave', 'mine', 'tourist', 'peak', 'water', 'spa', 'site', 'construction', 'summer', 'winter']; %>
+				<% for (let i = 0; i < 4; i++) { %>
+					<select name="tag_<%= i %>">
+						<% if (i > 0) { %>
+							<option value=""></option>
+						<% } %>
+						<% for (let tag of tags) { %>
+							<option value="<%= tag %>"><%= tag %></option>
+						<% } %>
+					</select>
+				<% } %>
+				<input type="text" placeholder="image" name="images">
+				<button type="submit">Submit</button>
+			</form>
+		</li>
+		<% for (let poi of pois.slice(0).reverse()) { %>
+		    <li class="poi" data-id="<%= poi.$loki %>">
+		    	<div class="position">
+					<span class="left"><%= poi.position.left %></span>
+					<span class="top"><%= poi.position.top %></span>
+				</div>
+				<div class="title">
+					<div class="sk"><%= poi.title.sk %></div>
+					<div class="en"><%= poi.title.en %></div>
+				</div>
+				<div class="description">
+					<div class="sk"><%= poi.description.sk %></div>
+					<div class="en"><%= poi.description.en %></div>
+				</div>
+				<div class="tags">
+					<% for (let tag of poi.tags) { %>
+						<span class="tag"><%= tag %></span>
+					<% } %>
+				</div>
+				<div class="images">
+					<% for (let image of poi.images) { %>
+						<div class="image"><%= image %></div>
+					<% } %>
+				</div>
+				<div class="actions">
+					<!-- <a class="update">Update</a> -->
+					<a class="delete">Delete</a>
+				</div>
+		    </li>
+		<% } %>
+	</ul>
+</body>
+</html>

@@ -23,6 +23,12 @@ $(window).on('load', () => {
 	};
 
 	let structurize = function (fields) {
+		let tags = [];
+		for (let i = 0; i < 4; i++) {
+			let tag = fields[`tag_${ i }`].value;
+			if (tag.length)
+				tags.push(tag);
+		}
 		return {
 			position: {
 				left: fields.position_left.value,
@@ -36,7 +42,7 @@ $(window).on('load', () => {
 				sk: fields.description_sk.value,
 				en: fields.description_en.value
 			},
-			tags: $(fields.tags).val(),
+			tags: tags,
 			images: [ fields.images.value ]
 		};
 	};

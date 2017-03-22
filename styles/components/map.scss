@@ -1,0 +1,79 @@
+.map {
+	width: 3068px;
+	height: 2526px;
+	margin-bottom: 80px; //toolbar area
+	background: rgb(210, 220, 180) url('/images/map.jpg') no-repeat;
+	position: relative;
+
+	.pois {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		.poi {
+			cursor: pointer;
+
+			&.monument {
+				.drop { fill: $poi-red-color; }
+				.icon { transform: translateX(0); }
+			}
+
+			&.castle {
+				.drop { fill: $poi-orange-color; }
+				.icon { transform: translateX(-100px); }
+			}
+
+			&.cave {
+				.drop { fill: $poi-lightbrown-color; }
+				.icon { transform: translateX(-200px); }
+			}
+
+			&.mine {
+				.drop { fill: $poi-brown-color; }
+				.icon { transform: translateX(-300px); }
+			}
+
+			&.tourist {
+				.drop { fill: $poi-lightgreen-color; }
+				.icon { transform: translateX(-400px); }
+			}
+
+			&.peak {
+				.drop { fill: $poi-green-color; }
+				.icon { transform: translateX(-500px); }
+			}
+
+			&.water {
+				.drop { fill: $poi-blue-color; }
+				.icon { transform: translateX(-600px); }
+			}
+
+			&.spa {
+				.drop { fill: $poi-lightblue-color; }
+				.icon { transform: translateX(-700px); }
+			}
+
+			&.site {
+				.drop { fill: $poi-purple-color; }
+				.icon { transform: translateX(-800px); }
+			}
+
+			&.construction {
+				.drop { fill: $poi-violet-color; }
+				.icon { transform: translateX(-900px); }
+			}
+
+			&.summer {
+				.drop { fill: $poi-yellow-color; }
+				.icon { transform: translateX(-1000px); }
+			}
+
+			&.winter {
+				.drop { fill: $poi-yellowgreen-color; }
+				.icon { transform: translateX(-1100px); }
+			}
+		}
+	}
+}

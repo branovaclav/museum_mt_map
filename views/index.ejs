@@ -2,76 +2,146 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Admin</title>
+	<meta name="viewport" content="width=1080, height=1880, initial-scale=1">
+	<title>Andrej Kmet Museum - Map</title>
 
-	<link rel="stylesheet" href="/styles/admin.css">
+	<!-- stylesheets -->
+	<link rel="stylesheet" href="styles/main.css">
 
-	<script src="/scripts/jquery-3.2.0.min.js"></script>
-	<script src="/scripts/admin.js"></script>
+	<!-- scripts -->
+	<script src="scripts/jquery-3.2.0.min.js"></script>
+	<script src="scripts/main.js"></script>
+	<script>
+		let data = {
+			<% for (let poi of pois) { %>
+				<%= poi.$loki %>: {
+					title: '<%- poi.title[lang] %>',
+					description: '<%- poi.description[lang] %>',
+					tags: [<%- poi.tags.map(tag => `'${ tag }'`).join(', ') %>],
+					images: [<%- poi.images.map(image => `'${ image }'`).join(', ') %>]
+				},
+			<% } %>
+		};
+	</script>
 </head>
 <body>
-	<ul class="pois">
-		<li class="poi selected" data-id="">
-			<div class="empty">New Point</div>
-			<div class="actions">
-				<!-- <a class="create">Create</a> -->
+	<section class="map">
+		<svg class="pois">
+			<defs>
+				<path id="svg-drop" d="M29,73 C29,73 48,52.34 53.54,44.24 C56.22,40 58,34.6 58,28.76 C58,12.86 45,0 29,0 C13,0 0,12.86 0,28.76 C0,34.6 1.76,40 4.46,44.24 C10,52.34 29,73 29,73 Z" />
+				<clipPath id="svg-clip">
+					<rect x="-8" y="0" width="74" height="81" />
+				</clipPath>
+				<filter id="svg-shadow">
+					<feGaussianBlur in="SourceAlpha" stdDeviation="4" />
+		            <feOffset dx="0" dy="4" result="shadowOffsetBlur" />
+		            <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .3 0" type="matrix"></feColorMatrix>
+					<feMerge>
+					    	<feMergeNode />
+					    	<feMergeNode in="SourceGraphic" />
+					</feMerge>
+		        </filter>
+				<filter id="svg-color">
+		            <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .6 0" type="matrix"></feColorMatrix>
+		        </filter>
+
+				<g id="svg-poi">
+					<use xlink:href="#svg-drop" filter="url(#svg-shadow)" fill="white" />
+					<use xlink:href="#svg-drop" transform="scale(.9068) translate(3 3)" />
+					<circle cx="29" cy="29" r="20" fill="white" />
+				</g>
+				<g id="svg-icon">
+					<image x="7" y="6" xlink:href="/images/icons_poi.svg" filter="url(#svg-color)" />
+				</g>
+			</defs>
+
+			<% for (let poi of pois) { %>
+				<g class="poi <%= poi.tags[0] %>" data-poi="<%= poi.$loki %>" data-tags="<%= poi.tags.join(' ') %>" transform="translate(<%= poi.position.left - 29 %> <%= poi.position.top - 73 %>)" clip-path="url(#svg-clip)">
+					<use class="drop" xlink:href="#svg-poi" />
+					<use class="icon" xlink:href="#svg-icon" />
+				</g>
+			<% } %>
+		</svg>
+	</section>
+
+	<section class="panels">
+		<div class="panel tags" data-panel="tags">
+			<div class="bar titlebar">
+				<h3><%= locale.titles.tags %></h3>
+				<ul class="buttons">
+					<li><a class="close" data-panel="tags">Close</a></li>
+				</ul>
 			</div>
-			<form id="form">
-				<input type="hidden" name="id">
-				<input type="text" placeholder="position left" name="position_left">
-				<input type="text" placeholder="position top" name="position_top">
-				<input type="text" placeholder="title sk" name="title_sk">
-				<input type="text" placeholder="title en" name="title_en">
-				<textarea placeholder="description sk" name="description_sk"></textarea>
-				<textarea placeholder="description en" name="description_en"></textarea>
-				<select name="tags" multiple="multiple">
-					<option value="monument">monument</option>
-					<option value="castle">castle</option>
-					<option value="cave">cave</option>
-					<option value="mine">mine</option>
-					<option value="tourist">tourist</option>
-					<option value="peak">peak</option>
-					<option value="water">water</option>
-					<option value="spa">spa</option>
-					<option value="site">site</option>
-					<option value="construction">construction</option>
-					<option value="summer">summer</option>
-					<option value="winter">winter</option>
-				</select>
-				<input type="text" placeholder="image" name="images">
-				<button type="submit">Submit</button>
-			</form>
-		</li>
-		<% for (let poi of pois.slice(0).reverse()) { %>
-		    <li class="poi" data-id="<%= poi.$loki %>">
-		    	<div class="position">
-					<span class="left"><%= poi.position.left %></span>
-					<span class="top"><%= poi.position.top %></span>
-				</div>
-				<div class="title">
-					<div class="sk"><%= poi.title.sk %></div>
-					<div class="en"><%= poi.title.en %></div>
-				</div>
-				<div class="description">
-					<div class="sk"><%= poi.description.sk %></div>
-					<div class="en"><%= poi.description.en %></div>
-				</div>
-				<div class="tags">
-					<% for (let tag of poi.tags) { %>
-						<span class="tag"><%= tag %></span>
+			<ul class="content">
+				<li><a class="tag monument" data-tag="monument"><%= locale.tags.monument %></a></li>
+				<li><a class="tag castle" data-tag="castle"><%= locale.tags.castle %></a></li>
+				<li><a class="tag cave" data-tag="cave"><%= locale.tags.cave %></a></li>
+				<li><a class="tag mine" data-tag="mine"><%= locale.tags.mine %></a></li>
+				<li><a class="tag tourist" data-tag="tourist"><%= locale.tags.tourist %></a></li>
+				<li><a class="tag peak" data-tag="peak"><%= locale.tags.peak %></a></li>
+				<li><a class="tag water" data-tag="water"><%= locale.tags.water %></a></li>
+				<li><a class="tag spa" data-tag="spa"><%= locale.tags.spa %></a></li>
+				<li><a class="tag site" data-tag="site"><%= locale.tags.site %></a></li>
+				<li><a class="tag construction" data-tag="construction"><%= locale.tags.construction %></a></li>
+				<li><a class="tag summer" data-tag="summer"><%= locale.tags.summer %></a></li>
+				<li><a class="tag winter" data-tag="winter"><%= locale.tags.winter %></a></li>
+			</ul>
+		</div>
+
+		<div class="panel list" data-panel="list">
+			<div class="bar titlebar">
+				<h3><%= locale.titles.list %></h3>
+				<ul class="buttons">
+					<li><a class="close" data-panel="list">Close</a></li>
+				</ul>
+			</div>
+			<div class="wrapper">
+				<ul class="content">
+					<% for (let poi of pois) { %>
+						<li class="poi" data-poi="<%= poi.$loki %>" data-tags="<%= poi.tags.join(' ') %>">
+							<a>
+								<%= poi.title[lang] %>
+							</a>
+						</li>
 					<% } %>
-				</div>
-				<div class="images">
-					<% for (let image of poi.images) { %>
-						<div class="image"><%= image %></div>
-					<% } %>
-				</div>
-				<div class="actions">
-					<!-- <a class="update">Update</a> -->
-					<a class="delete">Delete</a>
-				</div>
-		    </li>
-		<% } %>
-	</ul>
+				</ul>
+			</div>
+		</div>
+
+		<div class="panel detail" data-panel="detail">
+			<div class="bar titlebar">
+				<h3></h3>
+				<ul class="buttons">
+					<li><a class="prev">Previous</a></li>
+					<li><a class="next">Next</a></li>
+					<li><a class="close" data-panel="detail">Close</a></li>
+				</ul>
+			</div>
+			<div class="content">
+				<section class="images">
+					<img />
+				</section>
+				<section class="text">
+					<p></p>
+				</section>
+			</div>
+		</div>
+	</section>
+
+	<nav class="bar toolbar">
+		<ul class="links language">
+			<% let selected = (lang == 'sk') ? { sk: 'selected' } : { en: 'selected' } %>
+			<li><a href="/lang/sk" class="slo <%= selected.sk %>">SLO</a></li>
+			<li><a href="/lang/en" class="eng <%= selected.en %>">ENG</a></li>
+		</ul>
+		<ul class="links triggers">
+			<li><a class="trigger" data-panel="tags"><%= locale.menu.tags %></a></li>
+			<li><a class="trigger" data-panel="list"><%= locale.menu.list %></a></li>
+		</ul>
+		<ul class="buttons">
+			<li><a class="minus">Zoom Out</a></li>
+			<li><a href="/" class="home">Home</a></li>
+		</ul>
+	</nav>
 </body>
 </html>

@@ -1,0 +1,84 @@
+/* --- Colors --- */
+
+/* backgrounds */
+$page-bkg-color: rgb(0,0,0);
+
+/* text */
+$regular-text-color: rgb(255,255,255);
+$link-text-color: rgb(255,255,255);
+
+/* pois */
+$poi-red-color: rgb(228, 0, 0);
+$poi-orange-color: rgb(241, 124, 0);
+$poi-lightbrown-color: rgb(178, 167, 127);
+$poi-brown-color: rgb(115, 102, 99);
+$poi-lightgreen-color: rgb(111, 181, 5);
+$poi-green-color: rgb(0, 120, 84);
+$poi-blue-color: rgb(58, 121, 184);
+$poi-lightblue-color: rgb(128, 181, 215);
+$poi-purple-color: rgb(168, 18, 130);
+$poi-violet-color: rgb(94, 57, 195);
+$poi-yellow-color: rgb(200, 160, 0);
+$poi-yellowgreen-color: rgb(167, 176, 88);
+
+/* --- Fonts --- */
+@font-face {
+	font-family: 'Lacrima Serif';
+	src: url('/fonts/LacrimaSerif-Normal.otf');
+}
+
+$base-font-family: 'Lacrima Serif';
+
+/* --- Transitions --- */
+$slow: .3s;
+
+/* --- Base --- */
+html {
+	font-size: 62.5%; /* maps '1rem' to '10px' */
+	position: relative;
+
+	background-color: $page-bkg-color;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	color: $regular-text-color;
+
+	font-family: $base-font-family;
+	font-size: 2rem;
+	line-height: 1.231;
+	letter-spacing: -0.05rem;
+
+	user-select: none;
+	-webkit-font-smoothing: antialiased;
+	-webkit-overflow-scrolling: auto;
+	-webkit-user-drag: none;
+}
+
+/* --- Reset --- */
+h1, h2, h3, p,
+ul, li {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+
+ul, li,  {
+	list-style: none;
+}
+
+a {
+	display: block;
+	color: $link-text-color;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+img {
+	display: block;
+}

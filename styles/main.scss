@@ -1,6 +1,7 @@
-$badass: #bada55;
+// Base
+@import "base/base.scss";
 
-body {
-  margin: 0;
-  background-color: $badass;
-}
+// Components
+@import "components/bar.scss";
+@import "components/panels.scss";
+@import "components/map.scss";
