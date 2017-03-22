@@ -9,19 +9,23 @@ const port = process.env.PORT || 3000;
 const root = __dirname;
 
 let lang = 'sk';
-let data = {};
+let pois = {};
+let abcsort = (poi1, poi2) => {
+	let a = poi1.title[lang]; let b = poi2.title[lang];
+	return a < b ? -1 : (a > b ? 1 : 0);
+};
+
 const db = new loki('data/db.js', {
 	autoload: true,
 	autoloadCallback: () => {
-		data.pois = db.getCollection('pois');
-/*
-		console.log(data.pois.chain().sort((a, b) => {
-			return a.localCompare(b);
-			// if (a.title[lang] < b.title[lang]) return -1;
-			// if (a.title[lang] > b.title[lang]) return 1;
-			// return 0;
-		}).data());
-*/
+		let collection = db.getCollection('pois');
+		pois = {
+			collection,
+			data: {
+				all: collection.data,
+				sorted: collection.chain().sort(abcsort).data()
+			}
+		};
 	}
 });
 
@@ -31,33 +35,34 @@ app.set('view engine', 'ejs');
 
 //app
 app.get('/', (req, res) => {
-	res.render('index.ejs', { pois: data.pois.data, locale: locales[lang], lang });
+	res.render('index.ejs', { pois: pois.data.sorted, locale: locales[lang], lang });
 });
 
 app.get('/lang/:lang', (req, res) => {
 	lang = req.params.lang;
+	pois.data.sorted = pois.collection.chain().sort(abcsort).data();
 	res.redirect('/');
 });
 
 //admin
 app.get('/admin', (req, res) => {
-	res.render('admin.ejs', { pois: data.pois.data });
+	res.render('admin.ejs', { pois: pois.data.all });
 });
 
 app.post('/admin', (req, res) => {
-	res.send( data.pois.insert(req.body.data) );
+	res.send( pois.collection.insert(req.body.data) );
 	db.saveDatabase('db');
 });
 
 app.put('/admin', (req, res) => {
-	let doc = data.pois.get(req.body.id);
+	let doc = pois.collection.get(req.body.id);
 	Object.assign(doc, req.body.data);
-	res.send( data.pois.update(doc) );
+	res.send( pois.collection.update(doc) );
 	db.saveDatabase('db');
 });
 
 app.delete('/admin', (req, res) => {
-	res.send( data.pois.remove(data.pois.get(req.body.id)) );
+	res.send( pois.collection.remove(pois.collection.get(req.body.id)) );
 	db.saveDatabase('db');
 });
 
