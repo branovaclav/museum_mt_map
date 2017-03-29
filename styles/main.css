@@ -109,7 +109,9 @@ img {
   position: fixed;
   bottom: 0;
   left: 0;
-  background-color: black; }
+  height: calc(80px + 120px);
+  background-color: black;
+  border-bottom: solid 120px black; }
 
 .bar.toolbar > * {
   display: flex; }
@@ -126,7 +128,7 @@ img {
 
 .panels {
   position: fixed;
-  bottom: 80px;
+  bottom: 200px;
   left: 0;
   width: 100%; }
 

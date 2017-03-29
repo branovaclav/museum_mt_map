@@ -13,6 +13,10 @@ let pois = {};
 let abcsort = (poi1, poi2) => {
 	let a = poi1.title[lang]; let b = poi2.title[lang];
 	return a < b ? -1 : (a > b ? 1 : 0);
+
+	// str = str.replace(/[ÀÁÂÃÄÅ]/g,"A");
+    // str = str.replace(/[àáâãäå]/g,"a");
+    // str = str.replace(/[ÈÉÊË]/g,"E");
 };
 
 const db = new loki('data/db.js', {
@@ -79,7 +83,7 @@ app.listen(port, host, () => {
 
 
 
-
+/*
 app.get('/seed', (req, res) => {
 	db.removeCollection('pois');
 	db.addCollection('pois').insert([
@@ -108,3 +112,4 @@ app.get('/seed', (req, res) => {
 	db.saveDatabase('db');
 	res.redirect('/admin')
 });
+*/

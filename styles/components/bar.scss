@@ -45,7 +45,11 @@
 		position: fixed;
 		bottom: 0;
 		left: 0;
+		height: calc(80px + 120px);
 		background-color: black;
+		border-bottom: solid 120px black;
+		// transform: skewY(5.5deg);
+		// transform-origin: 0 0;
 
 		& > * {
 			display: flex;
