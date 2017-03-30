@@ -30,7 +30,7 @@
 			<defs>
 				<path id="svg-drop" d="M29,73 C29,73 48,52.34 53.54,44.24 C56.22,40 58,34.6 58,28.76 C58,12.86 45,0 29,0 C13,0 0,12.86 0,28.76 C0,34.6 1.76,40 4.46,44.24 C10,52.34 29,73 29,73 Z" />
 				<clipPath id="svg-clip">
-					<rect x="-8" y="0" width="74" height="81" />
+					<rect x="9" y="9" width="40" height="40" />
 				</clipPath>
 				<filter id="svg-shadow">
 					<feGaussianBlur in="SourceAlpha" stdDeviation="4" />
@@ -53,12 +53,18 @@
 				<g id="svg-icon">
 					<image x="7" y="6" xlink:href="/images/icons_poi.svg" filter="url(#svg-color)" />
 				</g>
+				<g id="svg-selection">
+					<circle cx="29" cy="73" r="8" />
+				</g>
 			</defs>
 
 			<% for (let poi of pois) { %>
-				<g class="poi <%= poi.tags[0] %>" data-poi="<%= poi.$loki %>" data-tags="<%= poi.tags.join(' ') %>" transform="translate(<%= poi.position.left - 29 %> <%= poi.position.top - 73 %>)" clip-path="url(#svg-clip)">
+				<g class="poi <%= poi.tags[0] %>" data-poi="<%= poi.$loki %>" data-tags="<%= poi.tags.join(' ') %>" data-position="<%= poi.position.left %>,<%= poi.position.top %>" transform="translate(<%= poi.position.left - 29 %> <%= poi.position.top - 73 %>) scale(1)">
+					<use class="selection" xlink:href="#svg-selection" />
 					<use class="drop" xlink:href="#svg-poi" />
-					<use class="icon" xlink:href="#svg-icon" />
+					<g clip-path="url(#svg-clip)">
+						<use class="icon" xlink:href="#svg-icon" />
+					</g>
 				</g>
 			<% } %>
 		</svg>
@@ -140,6 +146,7 @@
 		</ul>
 		<ul class="buttons">
 			<li><a class="minus">Zoom Out</a></li>
+			<li><a class="plus">Zoom In</a></li>
 			<li><a href="/" class="home">Home</a></li>
 		</ul>
 	</nav>

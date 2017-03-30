@@ -88,7 +88,7 @@
 
 .panel.list {
 	.wrapper {
-		max-height: 322px;
+		max-height: 524px;
 		overflow-y: auto;
 	}
 
@@ -122,6 +122,7 @@
 		}
 
 		.text {
+			min-height: 120px;
 			padding: 30px 38px;
 			background-color: rgba(black, .33);
 		}

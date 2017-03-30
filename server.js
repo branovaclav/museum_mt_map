@@ -4,7 +4,7 @@ const loki = require('lokijs');
 const locales = require('./locales');
 
 const app = express();
-const host = process.env.HOST || '127.0.0.1'; //'192.168.0.114';
+const host = process.env.HOST || '127.0.0.1';
 const port = process.env.PORT || 3000;
 const root = __dirname;
 
@@ -13,10 +13,6 @@ let pois = {};
 let abcsort = (poi1, poi2) => {
 	let a = poi1.title[lang]; let b = poi2.title[lang];
 	return a < b ? -1 : (a > b ? 1 : 0);
-
-	// str = str.replace(/[ÀÁÂÃÄÅ]/g,"A");
-    // str = str.replace(/[àáâãäå]/g,"a");
-    // str = str.replace(/[ÈÉÊË]/g,"E");
 };
 
 const db = new loki('data/db.js', {
@@ -75,41 +71,3 @@ app.listen(port, host, () => {
 	console.log('Server started on localhost:3000');
 	console.log('Press Ctrl+C to exit...');
 });
-
-
-
-
-
-
-
-
-/*
-app.get('/seed', (req, res) => {
-	db.removeCollection('pois');
-	db.addCollection('pois').insert([
-		{
-			position: { left: 100, top: 100 },
-			title: { sk: 'gNadpis', en: 'xHeadline' },
-			description: { sk: 'Popis', en: 'Description'},
-			tags: [ 'monument', 'castle', 'cave' ],
-			images: [ '001_01.jpg' ]
-		},
-		{
-			position: { left: 200, top: 100 },
-			title: { sk: 'zNadpis 2', en: 'eHeadline 2' },
-			description: { sk: 'Popis 2', en: 'Description 2'},
-			tags: [ 'mine', 'peak', 'water' ],
-			images: [ '002_01.jpg' ]
-		},
-		{
-			position: { left: 300, top: 100 },
-			title: { sk: 'čNadpis 3', en: 'zHeadline 3' },
-			description: { sk: 'Popis 3', en: 'Description 3'},
-			tags: [ 'water', 'summer', 'site' ],
-			images: [ '003_01.jpg' ]
-		}
-	]);
-	db.saveDatabase('db');
-	res.redirect('/admin')
-});
-*/

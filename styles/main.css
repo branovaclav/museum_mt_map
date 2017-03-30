@@ -29,7 +29,11 @@ body {
   user-select: none;
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: auto;
-  -webkit-user-drag: none; }
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent; }
+
+body.lock {
+  overflow: hidden; }
 
 /* --- Reset --- */
 h1, h2, h3, p,
@@ -100,7 +104,8 @@ img {
   background-position: 20px -277px; }
 
 .bar .buttons a.plus {
-  background-position: 20px -377px; }
+  background-position: 20px -377px;
+  display: none; }
 
 .bar .buttons a.minus {
   background-position: 20px -477px; }
@@ -260,7 +265,7 @@ img {
   background-color: rgba(255, 255, 255, 0.08); }
 
 .panel.list .wrapper {
-  max-height: 322px;
+  max-height: 524px;
   overflow-y: auto; }
 
 .panel.list .content .poi {
@@ -283,15 +288,17 @@ img {
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.3); }
 
 .panel.detail .content .text {
+  min-height: 120px;
   padding: 30px 38px;
   background-color: rgba(0, 0, 0, 0.33); }
 
 .map {
-  width: 3068px;
-  height: 2526px;
+  width: 2250px;
+  height: 4000px;
   margin-bottom: 80px;
-  background: #d2dcb4 url("/images/map.jpg") no-repeat;
-  position: relative; }
+  background: white url("/images/map.png") no-repeat;
+  position: relative;
+  transform-origin: top left; }
 
 .map .pois {
   position: absolute;
@@ -301,75 +308,102 @@ img {
   height: 100%; }
 
 .map .pois .poi {
-  cursor: pointer; }
+  cursor: pointer;
+  transform-origin: 29px 73px; }
 
-.map .pois .poi.monument .drop {
+.map .pois .poi .selection {
+  display: none; }
+
+.map .pois .poi.selected .drop {
+  animation: pulse .8s linear infinite alternate;
+  transform-origin: center; }
+
+.map .pois .poi.selected .selection {
+  display: block;
+  animation: beacon .8s infinite;
+  transform-origin: center; }
+
+@keyframes pulse {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.12); } }
+
+@keyframes beacon {
+  from {
+    transform: scale(1);
+    opacity: 1; }
+  to {
+    transform: scale(4.8);
+    opacity: 0; } }
+
+.map .pois .poi.monument .drop, .map .pois .poi.monument .selection {
   fill: #e40000; }
 
 .map .pois .poi.monument .icon {
   transform: translateX(0); }
 
-.map .pois .poi.castle .drop {
+.map .pois .poi.castle .drop, .map .pois .poi.castle .selection {
   fill: #f17c00; }
 
 .map .pois .poi.castle .icon {
   transform: translateX(-100px); }
 
-.map .pois .poi.cave .drop {
+.map .pois .poi.cave .drop, .map .pois .poi.cave .selection {
   fill: #b2a77f; }
 
 .map .pois .poi.cave .icon {
   transform: translateX(-200px); }
 
-.map .pois .poi.mine .drop {
+.map .pois .poi.mine .drop, .map .pois .poi.mine .selection {
   fill: #736663; }
 
 .map .pois .poi.mine .icon {
   transform: translateX(-300px); }
 
-.map .pois .poi.tourist .drop {
+.map .pois .poi.tourist .drop, .map .pois .poi.tourist .selection {
   fill: #6fb505; }
 
 .map .pois .poi.tourist .icon {
   transform: translateX(-400px); }
 
-.map .pois .poi.peak .drop {
+.map .pois .poi.peak .drop, .map .pois .poi.peak .selection {
   fill: #007854; }
 
 .map .pois .poi.peak .icon {
   transform: translateX(-500px); }
 
-.map .pois .poi.water .drop {
+.map .pois .poi.water .drop, .map .pois .poi.water .selection {
   fill: #3a79b8; }
 
 .map .pois .poi.water .icon {
   transform: translateX(-600px); }
 
-.map .pois .poi.spa .drop {
+.map .pois .poi.spa .drop, .map .pois .poi.spa .selection {
   fill: #80b5d7; }
 
 .map .pois .poi.spa .icon {
   transform: translateX(-700px); }
 
-.map .pois .poi.site .drop {
+.map .pois .poi.site .drop, .map .pois .poi.site .selection {
   fill: #a81282; }
 
 .map .pois .poi.site .icon {
   transform: translateX(-800px); }
 
-.map .pois .poi.construction .drop {
+.map .pois .poi.construction .drop, .map .pois .poi.construction .selection {
   fill: #5e39c3; }
 
 .map .pois .poi.construction .icon {
   transform: translateX(-900px); }
 
-.map .pois .poi.summer .drop {
+.map .pois .poi.summer .drop, .map .pois .poi.summer .selection {
   fill: #c8a000; }
 
 .map .pois .poi.summer .icon {
   transform: translateX(-1000px); }
 
-.map .pois .poi.winter .drop {
+.map .pois .poi.winter .drop, .map .pois .poi.winter .selection {
   fill: #a7b058; }
 
 .map .pois .poi.winter .icon {

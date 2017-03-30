@@ -36,7 +36,7 @@
 			&.prev { background-position: 20px -77px; }
 			&.next { background-position: 20px -177px; }
 			&.close { background-position: 20px -277px; }
-			&.plus { background-position: 20px -377px; }
+			&.plus { background-position: 20px -377px; display: none; }
 			&.minus { background-position: 20px -477px; }
 		}
 	}

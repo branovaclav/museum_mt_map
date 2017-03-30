@@ -48,7 +48,8 @@
   background-position: 20px -277px; }
 
 .bar .buttons a.plus {
-  background-position: 20px -377px; }
+  background-position: 20px -377px;
+  display: none; }
 
 .bar .buttons a.minus {
   background-position: 20px -477px; }

@@ -17,8 +17,10 @@ let panels = function () {
 	};
 
 	triggers.tags.add(triggers.list).on('click', event => {
-		if (panels.detail.is(':visible'))
+		if (panels.detail.is(':visible')) {
 			panels.detail.slideUp(dur);
+			pois.removeClass('selected');
+		}
 		($(event.target).is(triggers.tags) ? panels.tags : panels.list).slideToggle(dur, check);
 	});
 
@@ -36,6 +38,7 @@ let panels = function () {
 	buttons.detail.on('click', () => {
 		panels.detail.slideUp(dur);
 		state.slideDown(dur, check);
+		pois.removeClass('selected');
 	});
 };
 
@@ -83,16 +86,23 @@ let detail = function () {
 	let id;
 
 	let next = (id, direction) => triggers.list.filter(`[data-poi=${ id }]`)[ ['prevAll', 'nextAll'][direction] ](':not([data-inactive])');
+	let select = (id, scroll) => {
+		let position = triggers.map.removeClass('selected').filter(`[data-poi=${ id }]`).addClass('selected').data('position').split(',');
+		if (scroll)
+			$('body').animate({ scrollLeft: position[0] - $(window).width() / 2, scrollTop: position[1] - ($(window).height() - 1206) / 2 }, 350);
+	}
 	let check = id => {
 		nav.prev.toggleClass('disabled', next(id, 0).length == 0);
 		nav.next.toggleClass('disabled', next(id, 1).length == 0);
 	};
 
 	triggers.map.add(triggers.list).on('click', event => {
-		id = $(event.target).closest(triggers.map.add(triggers.list)).data('poi');
+		let trigger = $(event.target).closest(triggers.map.add(triggers.list));
+		id = trigger.data('poi');
 		panel.find('h3').text( data[id].title );
 		panel.find('img').attr({ src: `/data/images/${ data[id].images[0] }` });
 		panel.find('p').text( data[id].description );
+		select(id, trigger.is(triggers.list) && $('body').is(':not(.lock)'));
 		check(id);
 	});
 
@@ -106,8 +116,36 @@ let detail = function () {
 	});
 };
 
+let zoom = function () {
+	let triggers = {
+		in: $('.toolbar .buttons .plus'),
+		out: $('.toolbar .buttons .minus')
+	};
+	let map = $('.map');
+	let pois = map.find('.poi');
+	let position = { left: 500, top: 500 };
+	let scale = $(window).width() / map.width();
+	let scroll = (left, top) => $(window).scrollLeft(left).scrollTop(top);
+
+	triggers.in.add(triggers.out).on('click', event => {
+		let direction = $(event.target).hasClass('minus');
+
+		map.css({ transform: `scale(${ direction ? scale : 1 })` });
+		pois.each((i, poi) => { $(poi).attr({ transform: $(poi).attr('transform').replace(/scale\(.*?\)/g, `scale(${ direction ? 1 / scale : 1 })`) }) });
+		$('body').toggleClass('lock', direction);
+		scroll(direction ? 0 : position.left, direction ? 0 : position.top);
+
+		triggers.in.add(triggers.out).toggle();
+	});
+
+	scroll(position.left, position.top);
+};
+
 $(window).on('load', () => {
 	panels();
 	tags();
 	detail();
+	zoom();
+
+	$(document).on('contextmenu', event => event.preventDefault());
 });

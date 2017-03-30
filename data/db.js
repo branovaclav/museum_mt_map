@@ -4,8 +4,8 @@
         "name": "pois",
         "data": [{
             "position": {
-                "left": "1",
-                "top": "1"
+                "left": 896,
+                "top": 751
             },
             "title": {
                 "sk": "Domašínsky meander",
@@ -18,16 +18,16 @@
             "tags": ["monument", "water", "summer"],
             "images": ["001_01.jpg"],
             "meta": {
-                "revision": 1,
+                "revision": 2,
                 "created": 1490737480231,
                 "version": 0,
-                "updated": 1490737970195
+                "updated": 1490904679810
             },
             "$loki": 1
         }, {
             "position": {
-                "left": "2",
-                "top": "2"
+                "left": 847,
+                "top": 710
             },
             "title": {
                 "sk": "Nezbudská Lúčka",
@@ -40,16 +40,16 @@
             "tags": ["mine"],
             "images": ["002_01.jpg"],
             "meta": {
-                "revision": 1,
+                "revision": 2,
                 "created": 1490737480231,
                 "version": 0,
-                "updated": 1490738151338
+                "updated": 1490904679810
             },
             "$loki": 2
         }, {
             "position": {
-                "left": "3",
-                "top": "3"
+                "left": 656,
+                "top": 831
             },
             "title": {
                 "sk": "Prieskumná štôlňa Višňové",
@@ -62,16 +62,16 @@
             "tags": ["mine"],
             "images": ["003_01.jpg"],
             "meta": {
-                "revision": 1,
+                "revision": 2,
                 "created": 1490737480231,
                 "version": 0,
-                "updated": 1490738217209
+                "updated": 1490904679810
             },
             "$loki": 3
         }, {
             "position": {
-                "left": "4",
-                "top": "4"
+                "left": 908,
+                "top": 706
             },
             "title": {
                 "sk": "Starý hrad",
@@ -84,15 +84,16 @@
             "tags": ["castle", "summer"],
             "images": ["004_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490738284322,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 4
         }, {
             "position": {
-                "left": "5",
-                "top": "5"
+                "left": 815,
+                "top": 745
             },
             "title": {
                 "sk": "Hrad Strečno",
@@ -105,15 +106,16 @@
             "tags": ["castle"],
             "images": ["005_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490738339118,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 5
         }, {
             "position": {
-                "left": "6",
-                "top": "6"
+                "left": 875,
+                "top": 878
             },
             "title": {
                 "sk": "Dubná skala",
@@ -126,15 +128,16 @@
             "tags": ["mine"],
             "images": ["006_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490738479709,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 6
         }, {
             "position": {
-                "left": "7",
-                "top": "7"
+                "left": 1051,
+                "top": 717
             },
             "title": {
                 "sk": "Suchý",
@@ -147,15 +150,16 @@
             "tags": ["tourist", "peak", "winter"],
             "images": ["007_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490738557621,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 7
         }, {
             "position": {
-                "left": "8",
-                "top": "8"
+                "left": 1208,
+                "top": 704
             },
             "title": {
                 "sk": "Malý Kriváň",
@@ -168,15 +172,16 @@
             "tags": ["peak", "summer", "winter"],
             "images": ["008_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490738632881,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 8
         }, {
             "position": {
-                "left": "9",
-                "top": "9"
+                "left": 1308,
+                "top": 669
             },
             "title": {
                 "sk": "Veľký Kriváň",
@@ -189,15 +194,16 @@
             "tags": ["peak", "summer", "winter"],
             "images": ["009_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490738689312,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 9
         }, {
             "position": {
-                "left": "10",
-                "top": "10"
+                "left": 1403,
+                "top": 669
             },
             "title": {
                 "sk": "Chleb",
@@ -210,15 +216,16 @@
             "tags": ["peak", "summer", "winter"],
             "images": ["010_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490738739569,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 10
         }, {
             "position": {
-                "left": "11",
-                "top": "11"
+                "left": 1527,
+                "top": 464
             },
             "title": {
                 "sk": "Veľký a Malý Rozsutec",
@@ -231,15 +238,16 @@
             "tags": ["tourist", "peak", "summer"],
             "images": ["011_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490738829059,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 11
         }, {
             "position": {
-                "left": "12",
-                "top": "12"
+                "left": 1456,
+                "top": 627
             },
             "title": {
                 "sk": "Mojžišove pramene",
@@ -252,15 +260,16 @@
             "tags": ["water", "summer"],
             "images": ["012_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490738904400,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 12
         }, {
             "position": {
-                "left": "13",
-                "top": "13"
+                "left": 1487,
+                "top": 696
             },
             "title": {
                 "sk": "Šútovský vodopád",
@@ -273,15 +282,16 @@
             "tags": ["tourist", "water", "summer"],
             "images": ["013_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490738956388,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 13
         }, {
             "position": {
-                "left": "14",
-                "top": "14"
+                "left": 1351,
+                "top": 582
             },
             "title": {
                 "sk": "Jánošíkove diery",
@@ -294,15 +304,16 @@
             "tags": ["tourist", "summer"],
             "images": ["014_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490739008397,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 14
         }, {
             "position": {
-                "left": "15",
-                "top": "15"
+                "left": 1763,
+                "top": 768
             },
             "title": {
                 "sk": "Šíp",
@@ -315,15 +326,16 @@
             "tags": ["tourist", "peak", "water", "summer"],
             "images": ["015_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490739078374,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 15
         }, {
             "position": {
-                "left": "16",
-                "top": "16"
+                "left": 1534,
+                "top": 850
             },
             "title": {
                 "sk": "Kraľoviansky meander",
@@ -336,15 +348,16 @@
             "tags": ["monument", "summer"],
             "images": ["016_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490739141406,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 16
         }, {
             "position": {
-                "left": "17",
-                "top": "17"
+                "left": 1889,
+                "top": 965
             },
             "title": {
                 "sk": "Skladaná skala",
@@ -357,15 +370,16 @@
             "tags": ["mine"],
             "images": ["017_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490739198651,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 17
         }, {
             "position": {
-                "left": "18",
-                "top": "18"
+                "left": 745,
+                "top": 883
             },
             "title": {
                 "sk": "Minčol",
@@ -378,15 +392,16 @@
             "tags": ["tourist", "peak", "summer", "winter"],
             "images": ["018_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490739256024,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 18
         }, {
             "position": {
-                "left": "19",
-                "top": "19"
+                "left": 689,
+                "top": 1120
             },
             "title": {
                 "sk": "Veľká lúka",
@@ -399,15 +414,16 @@
             "tags": ["tourist", "peak", "summer", "winter"],
             "images": ["019_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490739308245,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 19
         }, {
             "position": {
-                "left": "20",
-                "top": "20"
+                "left": 767,
+                "top": 1168
             },
             "title": {
                 "sk": "Mlynská dolina",
@@ -420,15 +436,16 @@
             "tags": ["peak", "summer", "winter"],
             "images": ["020_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490739355307,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 20
         }, {
             "position": {
-                "left": "21",
-                "top": "21"
+                "left": 808,
+                "top": 1344
             },
             "title": {
                 "sk": "Trebostovo",
@@ -441,15 +458,16 @@
             "tags": ["mine"],
             "images": ["021_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490739400092,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 21
         }, {
             "position": {
-                "left": "22",
-                "top": "22"
+                "left": 923,
+                "top": 1232
             },
             "title": {
                 "sk": "Martin – Kalnô",
@@ -462,15 +480,16 @@
             "tags": ["site"],
             "images": ["022_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490739448322,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 22
         }, {
             "position": {
-                "left": "23",
-                "top": "23"
+                "left": 1315,
+                "top": 1159
             },
             "title": {
                 "sk": "Turčianska Štiavnička – Teplické serpentíny",
@@ -483,15 +502,16 @@
             "tags": ["tourist", "water", "summer"],
             "images": ["023_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490739524821,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 23
         }, {
             "position": {
-                "left": "24",
-                "top": "24"
+                "left": 1454,
+                "top": 1272
             },
             "title": {
                 "sk": "Katova skala",
@@ -504,15 +524,16 @@
             "tags": ["tourist", "peak", "summer"],
             "images": ["024_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490739564313,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 24
         }, {
             "position": {
-                "left": "25",
-                "top": "25"
+                "left": 1257,
+                "top": 1258
             },
             "title": {
                 "sk": "Sklabinský hrad",
@@ -525,15 +546,16 @@
             "tags": ["castle", "tourist", "summer"],
             "images": ["025_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490739614687,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 25
         }, {
             "position": {
-                "left": "26",
-                "top": "26"
+                "left": 1700,
+                "top": 1488
             },
             "title": {
                 "sk": "Blatné",
@@ -546,15 +568,16 @@
             "tags": ["monument", "water", "summer"],
             "images": ["026_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490739659375,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 26
         }, {
             "position": {
-                "left": "27",
-                "top": "27"
+                "left": 1670,
+                "top": 859
             },
             "title": {
                 "sk": "Rojkovská travertínová kopa",
@@ -567,15 +590,16 @@
             "tags": ["monument", "water"],
             "images": ["027_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490739715726,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 27
         }, {
             "position": {
-                "left": "28",
-                "top": "28"
+                "left": 1794,
+                "top": 1545
             },
             "title": {
                 "sk": "Matejkovský kamenný prúd",
@@ -588,15 +612,16 @@
             "tags": ["monument", "water", "summer"],
             "images": ["028_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490739762661,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 28
         }, {
             "position": {
-                "left": "29",
-                "top": "29"
+                "left": 2055,
+                "top": 1427
             },
             "title": {
                 "sk": "Jazierske travertíny",
@@ -609,15 +634,16 @@
             "tags": ["monument", "tourist", "water"],
             "images": ["029_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490739819113,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 29
         }, {
             "position": {
-                "left": "30",
-                "top": "30"
+                "left": 575,
+                "top": 1688
             },
             "title": {
                 "sk": "Zniev",
@@ -630,15 +656,16 @@
             "tags": ["castle", "tourist", "peak"],
             "images": ["030_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490739872139,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 30
         }, {
             "position": {
-                "left": "31",
-                "top": "31"
+                "left": 177,
+                "top": 1597
             },
             "title": {
                 "sk": "Kľak",
@@ -651,15 +678,16 @@
             "tags": ["tourist", "peak", "summer"],
             "images": ["031_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490739916944,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 31
         }, {
             "position": {
-                "left": "32",
-                "top": "32"
+                "left": 258,
+                "top": 1592
             },
             "title": {
                 "sk": "Kľacký vodopád",
@@ -672,15 +700,16 @@
             "tags": ["monument", "tourist", "water"],
             "images": ["032_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490740000140,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 32
         }, {
             "position": {
-                "left": "33",
-                "top": "33"
+                "left": 393,
+                "top": 1909
             },
             "title": {
                 "sk": "Hadviga",
@@ -693,15 +722,16 @@
             "tags": ["tourist", "summer"],
             "images": ["033_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490740042598,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 33
         }, {
             "position": {
-                "left": "34",
-                "top": "34"
+                "left": 358,
+                "top": 2067
             },
             "title": {
                 "sk": "Vyšehrad",
@@ -714,15 +744,16 @@
             "tags": ["tourist", "peak", "site"],
             "images": ["034_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490740115904,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 34
         }, {
             "position": {
-                "left": "35",
-                "top": "35"
+                "left": 806,
+                "top": 1891
             },
             "title": {
                 "sk": "Stráža",
@@ -735,15 +766,16 @@
             "tags": ["tourist", "peak", "water", "summer"],
             "images": ["035_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490740163785,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 35
         }, {
             "position": {
-                "left": "36",
-                "top": "36"
+                "left": 695,
+                "top": 1910
             },
             "title": {
                 "sk": "Ivančiná",
@@ -751,20 +783,21 @@
             },
             "description": {
                 "sk": "Ivančiná – v minulosti nálezisko rašeliny, ktorá tu vznikala pred 10 000 – 2 000 rokmi, pričom jej hrúbka je v rozsahu 2 – 6 metrov. Vyťažené jamy dnes slúžia na rybnikárske účely a sú súčasťou chráneného územia Mokrade Turca. Významná cykloturistická a náučná lokalita.",
-                "en": "Ivančiná – this was a peat quarry in the past. Ivančiná originated\n10 000 – 2 000 years ago, and its thickness varies from 2 to 6 metres. The excavation pits are today used for fish-farming and it is also classified as a protected area of the Turiec wetlands. It is a major cycling and educational location."
+                "en": "Ivančiná – this was a peat quarry in the past. Ivančiná originated 10 000 – 2 000 years ago, and its thickness varies from 2 to 6 metres. The excavation pits are today used for fish-farming and it is also classified as a protected area of the Turiec wetlands. It is a major cycling and educational location."
             },
             "tags": ["water", "site", "summer"],
             "images": ["036_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490740220023,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 36
         }, {
             "position": {
-                "left": "37",
-                "top": "37"
+                "left": 824,
+                "top": 2120
             },
             "title": {
                 "sk": "Turčianske Teplice",
@@ -777,15 +810,16 @@
             "tags": ["spa", "tourist", "water", "summer"],
             "images": ["037_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490740362960,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 37
         }, {
             "position": {
-                "left": "38",
-                "top": "38"
+                "left": 1344,
+                "top": 1722
             },
             "title": {
                 "sk": "Necpalský vodopád",
@@ -798,15 +832,16 @@
             "tags": ["water", "tourist", "summer"],
             "images": ["038_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490740438714,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 38
         }, {
             "position": {
-                "left": "39",
-                "top": "39"
+                "left": 1523,
+                "top": 1718
             },
             "title": {
                 "sk": "Borišov",
@@ -819,15 +854,16 @@
             "tags": ["tourist", "peak", "site", "summer"],
             "images": ["039_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490740505872,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 39
         }, {
             "position": {
-                "left": "40",
-                "top": "40"
+                "left": 1602,
+                "top": 1831
             },
             "title": {
                 "sk": "Ploská",
@@ -840,15 +876,16 @@
             "tags": ["tourist", "peak", "summer", "winter"],
             "images": ["040_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490740553567,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 40
         }, {
             "position": {
-                "left": "41",
-                "top": "41"
+                "left": 1684,
+                "top": 1767
             },
             "title": {
                 "sk": "Čierny kameň",
@@ -861,15 +898,16 @@
             "tags": ["tourist", "peak", "summer"],
             "images": ["041_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490740606282,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 41
         }, {
             "position": {
-                "left": "42",
-                "top": "42"
+                "left": 1182,
+                "top": 1675
             },
             "title": {
                 "sk": "Gaderská dolina a Dedošová dolina",
@@ -882,15 +920,16 @@
             "tags": ["tourist", "peak", "summer"],
             "images": ["042_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490740666386,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 42
         }, {
             "position": {
-                "left": "43",
-                "top": "43"
+                "left": 1063,
+                "top": 1870
             },
             "title": {
                 "sk": "Blatnická dolina",
@@ -903,15 +942,16 @@
             "tags": ["tourist", "peak", "summer"],
             "images": ["043_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490740726740,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 43
         }, {
             "position": {
-                "left": "44",
-                "top": "44"
+                "left": 1220,
+                "top": 1862
             },
             "title": {
                 "sk": "Tlstá",
@@ -924,15 +964,16 @@
             "tags": ["tourist", "peak", "summer"],
             "images": ["044_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490740769873,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 44
         }, {
             "position": {
-                "left": "45",
-                "top": "45"
+                "left": 1141,
+                "top": 1883
             },
             "title": {
                 "sk": "Ostrá",
@@ -945,15 +986,16 @@
             "tags": ["tourist", "peak", "summer"],
             "images": ["045_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490740817777,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 45
         }, {
             "position": {
-                "left": "46",
-                "top": "46"
+                "left": 1060,
+                "top": 1797
             },
             "title": {
                 "sk": "Konský dol",
@@ -966,15 +1008,16 @@
             "tags": ["tourist", "peak", "summer"],
             "images": ["046_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490740872580,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 46
         }, {
             "position": {
-                "left": "47",
-                "top": "47"
+                "left": 1106,
+                "top": 1777
             },
             "title": {
                 "sk": "Jaskyňa Mažarná",
@@ -987,15 +1030,16 @@
             "tags": ["cave", "site", "summer"],
             "images": ["047_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490740934285,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 47
         }, {
             "position": {
-                "left": "48",
-                "top": "48"
+                "left": 1171,
+                "top": 1918
             },
             "title": {
                 "sk": "Drieňok",
@@ -1008,15 +1052,16 @@
             "tags": ["tourist", "peak", "summer"],
             "images": ["048_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490740982717,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 48
         }, {
             "position": {
-                "left": "49",
-                "top": "49"
+                "left": 1463,
+                "top": 1949
             },
             "title": {
                 "sk": "Ostredok",
@@ -1029,15 +1074,16 @@
             "tags": ["tourist", "peak", "summer", "winter"],
             "images": ["049_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490741030675,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 49
         }, {
             "position": {
-                "left": "50",
-                "top": "50"
+                "left": 1471,
+                "top": 2071
             },
             "title": {
                 "sk": "Krížna",
@@ -1050,15 +1096,16 @@
             "tags": ["tourist", "peak", "summer", "winter"],
             "images": ["050_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490741075688,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 50
         }, {
             "position": {
-                "left": "51",
-                "top": "51"
+                "left": 1369,
+                "top": 2024
             },
             "title": {
                 "sk": "Kráľova studňa",
@@ -1071,15 +1118,16 @@
             "tags": ["tourist", "water", "summer"],
             "images": ["051_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490741128023,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 51
         }, {
             "position": {
-                "left": "52",
-                "top": "52"
+                "left": 1721,
+                "top": 2029
             },
             "title": {
                 "sk": "Veľký Šturec",
@@ -1092,15 +1140,16 @@
             "tags": ["tourist", "peak", "summer"],
             "images": ["052_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490741181223,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 52
         }, {
             "position": {
-                "left": "53",
-                "top": "53"
+                "left": 1882,
+                "top": 2002
             },
             "title": {
                 "sk": "Zvolen",
@@ -1113,15 +1162,16 @@
             "tags": ["monument", "tourist", "peak", "winter"],
             "images": ["053_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490741249658,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 53
         }, {
             "position": {
-                "left": "54",
-                "top": "54"
+                "left": 2073,
+                "top": 1998
             },
             "title": {
                 "sk": "Korytnica",
@@ -1134,15 +1184,16 @@
             "tags": ["spa", "water", "tourist", "summer"],
             "images": ["054_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490741314148,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 54
         }, {
             "position": {
-                "left": "55",
-                "top": "55"
+                "left": 728,
+                "top": 2508
             },
             "title": {
                 "sk": "Sklené",
@@ -1155,15 +1206,16 @@
             "tags": ["cave", "water", "tourist", "summer"],
             "images": ["055_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490741411435,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 55
         }, {
             "position": {
-                "left": "56",
-                "top": "56"
+                "left": 855,
+                "top": 2215
             },
             "title": {
                 "sk": "Železničná trať Dolná Štubňa – Banská Bystrica",
@@ -1176,15 +1228,16 @@
             "tags": ["construction"],
             "images": ["056_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490741460476,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 56
         }, {
             "position": {
-                "left": "57",
-                "top": "57"
+                "left": 951,
+                "top": 2673
             },
             "title": {
                 "sk": "Kremnické Bane",
@@ -1197,15 +1250,16 @@
             "tags": ["tourist", "spa", "summer"],
             "images": ["057_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490741520958,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 57
         }, {
             "position": {
-                "left": "58",
-                "top": "58"
+                "left": 1208,
+                "top": 2682
             },
             "title": {
                 "sk": "Skalka",
@@ -1218,15 +1272,16 @@
             "tags": ["tourist", "peak", "summer", "winter"],
             "images": ["058_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490741585150,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 58
         }, {
             "position": {
-                "left": "59",
-                "top": "59"
+                "left": 985,
+                "top": 2833
             },
             "title": {
                 "sk": "Kremnica",
@@ -1239,15 +1294,16 @@
             "tags": ["monument", "mine", "tourist", "site"],
             "images": ["059_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490741672579,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 59
         }, {
             "position": {
-                "left": "60",
-                "top": "60"
+                "left": 1349,
+                "top": 2348
             },
             "title": {
                 "sk": "Harmanecká jaskyňa",
@@ -1260,15 +1316,16 @@
             "tags": ["monument", "cave", "tourist"],
             "images": ["060_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490741728387,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 60
         }, {
             "position": {
-                "left": "61",
-                "top": "61"
+                "left": 1158,
+                "top": 2343
             },
             "title": {
                 "sk": "Flochová",
@@ -1281,15 +1338,16 @@
             "tags": ["tourist", "peak", "summer"],
             "images": ["061_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490741778586,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 61
         }, {
             "position": {
-                "left": "62",
-                "top": "62"
+                "left": 1046,
+                "top": 2574
             },
             "title": {
                 "sk": "Turčecký vodovod",
@@ -1302,9 +1360,10 @@
             "tags": ["spa", "construction", "water"],
             "images": ["062_01.jpg"],
             "meta": {
-                "revision": 0,
+                "revision": 1,
                 "created": 1490741845704,
-                "version": 0
+                "version": 0,
+                "updated": 1490904679810
             },
             "$loki": 62
         }],
@@ -1354,7 +1413,7 @@
         "recursiveWait": true,
         "recursiveWaitLimit": false,
         "recursiveWaitLimitDuration": 2000,
-        "started": 1490741779107
+        "started": 1490904655367
     },
     "persistenceMethod": "fs",
     "persistenceAdapter": null,
