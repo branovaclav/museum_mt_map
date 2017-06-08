@@ -147,108 +147,139 @@ img {
   column-width: 33.33%;
   column-gap: 0; }
 
-.panel.tags .content {
-  letter-spacing: -0.09rem; }
-
-.panel.tags .content .tag {
-  height: 68px;
-  padding: 22px 10px 22px 70px;
+.panel.tags .tag,
+.panel.detail .tag {
   box-sizing: border-box;
-  position: relative;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; }
+  position: relative; }
 
-.panel.tags .content .tag::before, .panel.tags .content .tag::after {
+.panel.tags .tag::before, .panel.tags .tag::after,
+.panel.detail .tag::before,
+.panel.detail .tag::after {
   content: '';
   position: absolute;
   width: 50px;
   height: 50px;
   box-sizing: border-box; }
 
-.panel.tags .content .tag::before {
+.panel.tags .tag::before,
+.panel.detail .tag::before {
   top: 9px;
   left: 9px;
   border: solid 3px white;
   border-radius: 50%;
   box-shadow: 0 0 4px black; }
 
-.panel.tags .content .tag::after {
+.panel.tags .tag::after,
+.panel.detail .tag::after {
   top: 12px;
   left: 12px;
   background: url("/images/icons_poi.svg") no-repeat; }
 
-.panel.tags .content .tag.monument::before {
+.panel.tags .tag.monument::before,
+.panel.detail .tag.monument::before {
   background-color: #e40000; }
 
-.panel.tags .content .tag.monument::after {
+.panel.tags .tag.monument::after,
+.panel.detail .tag.monument::after {
   background-position: 0 0; }
 
-.panel.tags .content .tag.castle::before {
+.panel.tags .tag.castle::before,
+.panel.detail .tag.castle::before {
   background-color: #f17c00; }
 
-.panel.tags .content .tag.castle::after {
+.panel.tags .tag.castle::after,
+.panel.detail .tag.castle::after {
   background-position: -100px 0; }
 
-.panel.tags .content .tag.cave::before {
+.panel.tags .tag.cave::before,
+.panel.detail .tag.cave::before {
   background-color: #b2a77f; }
 
-.panel.tags .content .tag.cave::after {
+.panel.tags .tag.cave::after,
+.panel.detail .tag.cave::after {
   background-position: -200px 0; }
 
-.panel.tags .content .tag.mine::before {
+.panel.tags .tag.mine::before,
+.panel.detail .tag.mine::before {
   background-color: #736663; }
 
-.panel.tags .content .tag.mine::after {
+.panel.tags .tag.mine::after,
+.panel.detail .tag.mine::after {
   background-position: -300px 0; }
 
-.panel.tags .content .tag.tourist::before {
+.panel.tags .tag.tourist::before,
+.panel.detail .tag.tourist::before {
   background-color: #6fb505; }
 
-.panel.tags .content .tag.tourist::after {
+.panel.tags .tag.tourist::after,
+.panel.detail .tag.tourist::after {
   background-position: -400px 0; }
 
-.panel.tags .content .tag.peak::before {
+.panel.tags .tag.peak::before,
+.panel.detail .tag.peak::before {
   background-color: #007854; }
 
-.panel.tags .content .tag.peak::after {
+.panel.tags .tag.peak::after,
+.panel.detail .tag.peak::after {
   background-position: -500px 0; }
 
-.panel.tags .content .tag.water::before {
+.panel.tags .tag.water::before,
+.panel.detail .tag.water::before {
   background-color: #3a79b8; }
 
-.panel.tags .content .tag.water::after {
+.panel.tags .tag.water::after,
+.panel.detail .tag.water::after {
   background-position: -600px 0; }
 
-.panel.tags .content .tag.spa::before {
+.panel.tags .tag.spa::before,
+.panel.detail .tag.spa::before {
   background-color: #80b5d7; }
 
-.panel.tags .content .tag.spa::after {
+.panel.tags .tag.spa::after,
+.panel.detail .tag.spa::after {
   background-position: -700px 0; }
 
-.panel.tags .content .tag.site::before {
+.panel.tags .tag.site::before,
+.panel.detail .tag.site::before {
   background-color: #a81282; }
 
-.panel.tags .content .tag.site::after {
+.panel.tags .tag.site::after,
+.panel.detail .tag.site::after {
   background-position: -800px 0; }
 
-.panel.tags .content .tag.construction::before {
+.panel.tags .tag.construction::before,
+.panel.detail .tag.construction::before {
   background-color: #5e39c3; }
 
-.panel.tags .content .tag.construction::after {
+.panel.tags .tag.construction::after,
+.panel.detail .tag.construction::after {
   background-position: -900px 0; }
 
-.panel.tags .content .tag.summer::before {
+.panel.tags .tag.summer::before,
+.panel.detail .tag.summer::before {
   background-color: #c8a000; }
 
-.panel.tags .content .tag.summer::after {
+.panel.tags .tag.summer::after,
+.panel.detail .tag.summer::after {
   background-position: -1000px 0; }
 
-.panel.tags .content .tag.winter::before {
+.panel.tags .tag.winter::before,
+.panel.detail .tag.winter::before {
   background-color: #a7b058; }
 
-.panel.tags .content .tag.winter::after {
+.panel.tags .tag.winter::after,
+.panel.detail .tag.winter::after {
   background-position: -1100px 0; }
+
+.panel.tags .content {
+  letter-spacing: -0.09rem; }
+
+.panel.tags .content .tag {
+  height: 68px;
+  padding: 22px 10px 22px 70px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
 
 .panel.tags .content .tag.disabled {
   color: rgba(255, 255, 255, 0.4); }
@@ -273,6 +304,24 @@ img {
 
 .panel.list .content .poi:active {
   background-color: rgba(255, 255, 255, 0.08); }
+
+.panel.detail .tags {
+  display: flex;
+  align-self: center; }
+
+.panel.detail .tags .tag {
+  width: 50px;
+  height: 50px;
+  margin: 0 2px;
+  transform: scale(0.86); }
+
+.panel.detail .tags .tag::before {
+  top: 0;
+  left: 0; }
+
+.panel.detail .tags .tag::after {
+  top: 3px;
+  left: 3px; }
 
 .panel.detail .content > * {
   padding: 30px 38px; }
@@ -313,6 +362,30 @@ img {
 
 .map .pois .poi .selection {
   display: none; }
+
+.map .pois .poi .clones {
+  fill: #e0e0e0; }
+
+.map .pois .poi .clones > * {
+  display: none; }
+
+.map .pois .poi.cloned.double > * {
+  transform: translate(0, -5px); }
+
+.map .pois .poi.cloned.double > *.clones > *:last-child {
+  display: block; }
+
+.map .pois .poi.cloned.triple > * {
+  transform: translate(0, -10px); }
+
+.map .pois .poi.cloned.triple > *.clones > *:not(:first-child) {
+  display: block; }
+
+.map .pois .poi.cloned.quadruple > * {
+  transform: translate(0, -15px); }
+
+.map .pois .poi.cloned.quadruple > *.clones > * {
+  display: block; }
 
 .map .pois .poi.selected .drop {
   animation: pulse .8s linear infinite alternate;

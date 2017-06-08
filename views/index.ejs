@@ -59,9 +59,16 @@
 			</defs>
 
 			<% for (let poi of pois) { %>
-				<g class="poi <%= poi.tags[0] %>" data-poi="<%= poi.$loki %>" data-tags="<%= poi.tags.join(' ') %>" data-position="<%= poi.position.left %>,<%= poi.position.top %>" transform="translate(<%= poi.position.left - 29 %> <%= poi.position.top - 73 %>) scale(1)">
+				<g class="poi <%= poi.tags[0] %> <%= poi.tags.length > 1 ? `cloned ${ ['double', 'triple', 'quadruple'][ poi.tags.length - 2 ] }` : '' %>" data-poi="<%= poi.$loki %>" data-tags="<%= poi.tags.join(' ') %>" data-position="<%= poi.position.left %>,<%= poi.position.top %>" transform="translate(<%= poi.position.left - 29 %> <%= poi.position.top - 73 %>) scale(1)">
 					<use class="selection" xlink:href="#svg-selection" />
-					<use class="drop" xlink:href="#svg-poi" />
+					<g class="clones">
+						<use xlink:href="#svg-poi" transform="translate(0, 15)" />
+						<use xlink:href="#svg-poi" transform="translate(0, 10)" />
+						<use xlink:href="#svg-poi" transform="translate(0, 5)" />
+					</g>
+					<g>
+						<use class="drop" xlink:href="#svg-poi" />
+					</g>
 					<g clip-path="url(#svg-clip)">
 						<use class="icon" xlink:href="#svg-icon" />
 					</g>
@@ -117,6 +124,8 @@
 		<div class="panel detail" data-panel="detail">
 			<div class="bar titlebar">
 				<h3></h3>
+				<ul class="tags">
+				</ul>
 				<ul class="buttons">
 					<li><a class="prev">Previous</a></li>
 					<li><a class="next">Next</a></li>

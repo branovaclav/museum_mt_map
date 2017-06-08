@@ -66,9 +66,10 @@ let tags = function () {
 
 		pois.attr({ 'data-inactive': 1 }).hide();
 		pois.filter((i, item) => {
-			let tag = $(item).data('tags').split(' ').find(tag => states[tag]);
-			$(item).attr({ 'class': `poi ${ tag }` });
-			return tag;
+			let tags = $(item).data('tags').split(' ').filter(tag => states[tag]);
+			if (tags.length)
+				$(item).attr({ 'class': `poi ${ tags[0] } ${ tags.length > 1 ? 'cloned ' + ['double', 'triple', 'quadruple'][ tags.length - 2 ] : '' }` });
+			return tags.length;
 		}).removeAttr('data-inactive').show();
 	});
 };
@@ -100,8 +101,9 @@ let detail = function () {
 		let trigger = $(event.target).closest(triggers.map.add(triggers.list));
 		id = trigger.data('poi');
 		panel.find('h3').text( data[id].title );
-		panel.find('img').attr({ src: `/data/images/${ data[id].images[0] }` });
-		panel.find('p').text( data[id].description );
+		panel.find('.tags').html(trigger.data('tags').split(' ').map(tag => `<li class="tag ${ tag }"></li>`));
+		panel.find('.images img').attr({ src: `/data/images/${ data[id].images[0] }` });
+		panel.find('.text p').text( data[id].description );
 		select(id, trigger.is(triggers.list) && $('body').is(':not(.lock)'));
 		check(id);
 	});

@@ -21,6 +21,29 @@
 				display: none;
 			}
 
+			.clones {
+				fill: rgb(224, 224, 224);
+
+				& > * { display: none; }
+			}
+
+			&.cloned {
+				&.double > * {
+					transform: translate(0, -5px);
+					&.clones > *:last-child { display: block; }
+				}
+
+				&.triple > * {
+					transform: translate(0, -10px);
+					&.clones > *:not(:first-child) { display: block; }
+				}
+
+				&.quadruple > * {
+					transform: translate(0, -15px);
+					&.clones > * { display: block; }
+				}
+			}
+
 			&.selected {
 				.drop {
 					animation: pulse .8s linear infinite alternate;
